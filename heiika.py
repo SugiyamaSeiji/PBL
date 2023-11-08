@@ -4,6 +4,8 @@ import streamlit as st
 
 import openai
 
+import sys
+
 
 
 
@@ -22,28 +24,42 @@ class GPT3:
         )
         return response['choices'][0]['message']['content']
 
+
+
 # ページのタイトルを設定
 st.set_page_config(page_title="chatgpt3.5 API Demo", page_icon=":smiley:")
 
 # アプリのタイトルを設定
 st.title("平易化")
 
-# フォームを作成
-with st.form(key = 'profile_form'):
-
-    # ユーザーの入力を受け取るためのテキストボックスを作成
+with st.form(key='profile_form'):
     user_input = st.text_input("平易化したい文章を入力してください")
+    uploaded_file = st.file_uploader("または、テキストファイルをアップロードしてください", type=["txt"])
 
-    # テキスト送信用のボタンを作成
     send_btn = st.form_submit_button('送信')
+    delete_btn = st.form_submit_button('削除')
+    
+    
 
-    # ユーザーが送信ボタンをクリックした場合にのみ、APIを呼び出して結果を表示する
-    if send_btn == True:
+    if send_btn:
+        result = ""
+        
+        if (user_input and uploaded_file) or (not user_input and not uploaded_file):
+            st.warning("テキストまたはファイルのどちらかを入力してください。")
+            sys.exit(1)
+        
+        
+
         if user_input:
-            # APIを呼び出し、結果を取得する
             gpt3 = GPT3()
             result = gpt3.generate_text(user_input)
+        elif uploaded_file:
+            file_contents = uploaded_file.read().decode('utf-8')
+            gpt3 = GPT3()
+            result = gpt3.generate_text(file_contents)
+            
 
-            # 結果を表示する
-            st.write(result)
-
+        st.write(result)
+        
+    if delete_btn:
+        result = ""
