@@ -24,7 +24,7 @@ class GPT3:
             model="gpt-4-1106-preview",
             messages=[
              {"role": "system", "content": "あなたは要約者です"},
-             {"role": "user", "content": f"「{prompt}」この文章を３００字程度に要約してください。また 「{keyword}」というキーワードを要約結果に入れるようにしてください"}
+             {"role": "user", "content": f"「{prompt}」この文章を３００字程度に要約してください。また 「{keyword}」というキーワードを要約結果に含めるようにしてください"}
             ]
         )
         return response['choices'][0]['message']['content']
