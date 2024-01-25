@@ -1,0 +1,54 @@
+h4 {
+    font-family: "Arial", sans-serif;
+}
+
+.title-bg {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color: #e0ffff;
+    height: 60px;
+}
+
+.sub-title-bg {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color: #e0ffff;
+}
+
+.css-1l02znn {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: white;
+    border-radius: 40px;
+    height: 50px;
+    background-color: #0000cd;
+    border-bottom: 1px solid #ccc;
+}
+
+.full-width-title {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f0f0f0;
+}
+
+.css-1fom3eu {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.streamlit-columns {
+    margin-top: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
