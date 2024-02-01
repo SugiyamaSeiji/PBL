@@ -2,7 +2,7 @@
 
 南海放送 ( [https://www.rnb.co.jp/](https://www.rnb.co.jp/)https://www.rnb.co.jp/ ) の特別番組台本から、その要約文を生成するアプリケーションです。初期画面は下の画像のようになっています。
 <p align="center">
-<img src="conjunction/static/nankai_app.png" width="300">
+<img src="static/nankai_app.png" width="300">
 </p>
 
 # 下準備
@@ -66,13 +66,13 @@ Openai		：openai==0.28
 ### キーワード
 キーワードとして、入力した単語を出力文に組み込むことができます。キーワードは空白(スペース)を挿入することで複数入力可能です。以下に入力例を示します。
 <p align="center">
-<img src="conjunction/static/nankai_keyword.png" width="600">
+<img src="static/nankai_keyword.png" width="600">
 </p>
 
 ### フレーズ
 入力した文章またはフレーズを出力文に組み込むことができます。以下に入力例を示します。
 <p align="center">
-<img src="conjunction/static/nankai_phrase.png" width="600">
+<img src="static/nankai_phrase.png" width="600">
 </p>
 
 ### 出力
