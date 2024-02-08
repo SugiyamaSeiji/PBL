@@ -7,7 +7,7 @@ from docx import Document
 
 class GPT3:
     def __init__(self):
-        openai.api_key = "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"
+        openai.api_key = ""
     
     def generate_text(self, prompt, max_tokens):
         response = openai.ChatCompletion.create(
